@@ -41,6 +41,7 @@ function binToDec(num,base,type)
 
 }
 
+// This function gets the data
 function conver()
 {   
     var check=1;
