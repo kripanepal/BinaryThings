@@ -1,14 +1,16 @@
 
+body, html {
+  height: 100%;
+  overflow: auto;
+  padding-top: 44px;
+  padding-bottom: 25px;
+}
 
-body {
-    padding: 0;
-    margin: 0;
-    background: #f2f6e9;
-  }
   /*--- navigation bar ---*/
-  .navbar {
-    background:#6ab446;
-  }
+#navigation{
+  position: fixed;
+  width:100%
+}
   .nav-link,
   .navbar-brand img{
     color: #fff;
@@ -21,21 +23,57 @@ body {
     margin-right: 1em !important;
   }
   .nav-link:hover {
-    color: #000;
+    color:blue;
   }
   .navbar-collapse {
     justify-content: flex-end;
   }
 
- .convertForm{
-  m;
-  margin-left: 5em;
-  width: 600px;
-  border: 5px solid grey;
-  padding: 50px;
-  margin: 20px
- }
+  /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+  .row.content {height: 1500px}
+  
+  /* Set gray background color and 100% height */
+  .sidenav {
+    background-color: #f1f1f1;
+    height: 100%;
+  }
+  
+  /* Set black background color, white text and some padding */
+  footer {
+    background-color: #555;
+    color: white;
+    padding: 15px;
+  }
+  
+  /* On small screens, set height to 'auto' for sidenav and grid */
+  @media screen and (max-width: 767px) {
+    .sidenav {
+      height: auto;
+      padding: 15px;
+    }
+    .row.content {height: auto;} 
+  }
 
+ .convertForm{
+  margin-top: 62px;
+  margin-left: 25px;
+  padding: 25px;
+  width: 600px;
+  height: 250px;
+  position: absolute; 
+  border: 5px solid grey;
+  
+ }
+ .options
+ {
+ 
+    
+     height: 30px;
+     position: absolute;
+     width: 100px;
+     margin-top: 62px;
+     margin-left: 1000px;
+ }
 button,
 input {
   overflow: visible;
@@ -52,6 +90,7 @@ form*{
 .btn{
   border:2px solid black;
 }
+
 
 /* 
 input,textarea{

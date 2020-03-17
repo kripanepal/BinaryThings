@@ -17,8 +17,8 @@
   </head>
   <body>
     <!-- Navbar-->
-    <div class='container-fluid'>
-        <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+        <div>
+          <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top" id="navigation" >
             <a class = "navbar-brand" href="#"><img src="img/logo.jpg"></a> 
             <button class = "navbar-toggler navbar-dark" type="button" data-toggle = "collapse" data-target="#main-navigation">
                  <span class="navbar-togglrer-icon"></span>
@@ -37,56 +37,83 @@
              </ul>
            </div>
          </nav>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+      <div class="row content">
+        
+    
+        <div class="col-sm-9">
+        <!-- content-->
+        <div class="convertForm">
+          <form class="calc_form ">
+            <table class="calculation">
+              <tr>
+                <td><label for="bin">Binary number:</label></td>
+              <td ><input type="text" inputmode="numeric" id="bin" name="bin" class="math" ></td>
+                <td class="mathsymbol"><sub>2</sub></td>
+                <td>
+                  <input type="radio" id="Signed" 
+                   name="check" value="Signed">
+                  <label for="contactChoice1">Signed</label>
+              
+                  <input type="radio" id="Unsigned"
+                   name="check" value="Unsigned" checked>
+                  <label for="contactChoice2">Unsigned</label>
+              </td>
+              </tr>
+              <tr>
+                <td><label for="oct">Octal number:</label></td>
+              <td ><input type="text" inputmode="numeric" id="oct" class="math" name="oct"></td>
+                <td class="mathsymbol"><sub>8</sub></td>
+                
+              </tr>
+              <tr>
+                <td><label for="dec">Decimal number:</label></td>
+              <td ><input type="text" inputmode="numeric" id="dec" name="dec" class="math"></td>
+                <td class="mathsymbol"><sub>10</sub></td>
+               
+              </tr>
+              <tr>
+                <td><label for="x">Hex number:</label></td>
+              <td ><input type="text" id="hex" name="hex" class="math"></td>
+                <td class="mathsymbol"><sub>16</sub></td>
+               
+              </tr>
+              <tr>
+            </table>
+              
+              <div>
+                  <input type = "button" id="convert" onclick="conver()" value="convert">
+                  <button id="reset" type="reset">Reset</button>
+              </div>
+       
+            
+               </div>
+           </form>
+    
+    
+        </div>
+    
+        <div class="col-sm-3 sidenav">
+          <h4>John's Blog</h4>
+          <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a href="#section1">Home</a></li>
+            <li><a href="#section2">Friends</a></li>
+            <li><a href="#section3">Family</a></li>
+            <li><a href="#section3">Photos</a></li>
+          </ul><br>
+          
+        </div>
+      </div>
     </div>
     
 
-    <div class="convertForm">
-      <form class="calc_form ">
-        <table class="calculation">
-          <tr>
-            <td><label for="bin">Binary number:</label></td>
-          <td ><input type="text" inputmode="numeric" id="bin" name="bin" class="math" ></td>
-            <td class="mathsymbol"><sub>2</sub></td>
-            <td>
-              <input type="radio" id="Signed" 
-               name="check" value="Signed">
-              <label for="contactChoice1">Signed</label>
-          
-              <input type="radio" id="Unsigned"
-               name="check" value="Unsigned" checked>
-              <label for="contactChoice2">Unsigned</label>
-          </td>
-          </tr>
-          <tr>
-            <td><label for="oct">Octal number:</label></td>
-          <td ><input type="text" inputmode="numeric" id="oct" class="math" name="oct"></td>
-            <td class="mathsymbol"><sub>8</sub></td>
-            
-          </tr>
-          <tr>
-            <td><label for="dec">Decimal number:</label></td>
-          <td ><input type="text" inputmode="numeric" id="dec" name="dec" class="math"></td>
-            <td class="mathsymbol"><sub>10</sub></td>
-           
-          </tr>
-          <tr>
-            <td><label for="x">Hex number:</label></td>
-          <td ><input type="text" id="hex" name="hex" class="math"></td>
-            <td class="mathsymbol"><sub>16</sub></td>
-           
-          </tr>
-          <tr>
-        </table>
-          
-          <div>
-              <input type = "button" id="convert" onclick="conver()" value="convert">
-              <button id="reset" type="reset">Reset</button>
-          </div>
-   
-        
-           </div>
-       </form>
-  </div>
+  
+
+  
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

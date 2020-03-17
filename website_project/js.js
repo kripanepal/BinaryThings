@@ -7,11 +7,11 @@ function binToDec(num,base,type)
     console.log(base+"base");
     console.log(decimal+"decimal");
     document.getElementById("oct").value = decimal.toString(8);
-       document.getElementById("hex").value = decimal.toString(16).toUpperCase();
+    document.getElementById("hex").value = decimal.toString(16).toUpperCase();
        ///
     if(type=="signed")
     {
-     if(a.startsWith("1"))
+     if(temp.startsWith("1"))
      {
         c = parseInt(temp.substr(1),base);
         var b = "- "+c.toString(10);
